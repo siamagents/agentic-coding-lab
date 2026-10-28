@@ -13,7 +13,7 @@
 ## เริ่มต้น
 
 ```bash
-git clone https://github.com/nundorn/agentic-coding-lab.git
+git clone https://github.com/siamagents/agentic-coding-lab.git
 cd agentic-coding-lab
 npm install
 npm test        # ต้องผ่าน 1 เทสต์

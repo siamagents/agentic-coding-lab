@@ -3,6 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "scripts": { "test": "vitest run" },
-  "devDependencies": { "typescript": "^5.6.0", "vitest": "^2.1.0" }
+  "scripts": {
+    "test": "vitest run",
+    "lab:1": "vitest run -c vitest.labs.config.ts labs/lab1",
+    "lab:2": "vitest run -c vitest.labs.config.ts labs/lab2",
+    "lab:final": "vitest run -c vitest.labs.config.ts labs/final"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  }
 }

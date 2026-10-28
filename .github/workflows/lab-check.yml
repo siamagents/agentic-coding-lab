@@ -1,0 +1,32 @@
+# Checks the course labs on every push. learn.siamagents.com reads the result of each job (lab-1,
+# lab-2, final) to tick the lab lesson, and only accepts runs of this exact file: do not edit it.
+name: lab-check
+on:
+  push:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    name: ${{ matrix.lab }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { lab: lab-1, file: labs/lab1.test.ts }
+          - { lab: lab-2, file: labs/lab2.test.ts }
+          - { lab: final, file: labs/final.test.ts }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      # Always grade with the official checks, whatever is in this repo's labs/ folder.
+      - name: Use the official lab checks
+        run: |
+          rm -rf labs vitest.labs.config.ts
+          curl -sfL https://codeload.github.com/siamagents/agentic-coding-lab/tar.gz/refs/heads/main \
+            | tar -xz --strip-components=1 agentic-coding-lab-main/labs agentic-coding-lab-main/vitest.labs.config.ts
+      - run: npm ci
+      - run: npx vitest run -c vitest.labs.config.ts ${{ matrix.file }}

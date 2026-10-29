@@ -1,6 +1,6 @@
 # Agentic Coding Lab · ระบบจองคิวร้านเล็ก
 
-โปรเจกต์ตัวอย่างสำหรับคอร์ส **Agentic Coding ใช้งานจริง ด้วย Claude Code** ที่ [learn.siamagents.com](https://learn.siamagents.com)
+โปรเจกต์ตัวอย่างสำหรับคอร์สฟรี **[Agentic Coding ใช้งานจริง ด้วย Claude Code](https://learn.siamagents.com/courses/agentic-coding-claude-code)** ที่ learn.siamagents.com เรียนเป็นภาษาไทย ทำแล็บในรีโปนี้จนเทสต์ผ่าน สอบผ่านแล้วได้ใบรับรองที่เพิ่มเข้า LinkedIn ได้
 
 เป็นโปรเจกต์เดียวกับที่ใช้อัดวิดีโอทุกตอน: ระบบจองคิวของร้านเล็ก ๆ มีหน้ารายการคิว (`src/queue-list.ts`) และไฟล์ส่งออก CSV ที่ร้านนำเข้าเครื่องขายหน้าร้านทุกเย็น (`src/export-csv.ts`) โค้ดตั้งใจให้สั้นและ **มีบักซ่อนอยู่** ไว้ให้ฝึก
 
@@ -8,7 +8,7 @@
 
 - Node.js 20 ขึ้นไป
 - git
-- [Claude Code](https://docs.claude.com/en/docs/claude-code/overview) ที่ login แล้ว (ต้องมีแพ็กเกจ Claude Pro, Max หรือ API key)
+- [Claude Code](https://code.claude.com/docs/en/overview) (ดูวิธีติดตั้งทีละขั้นที่ [บทความนี้](https://learn.siamagents.com/articles/install-claude-code)) ที่ login แล้ว (ต้องมีแพ็กเกจ Claude Pro, Max หรือ API key)
 
 ## เริ่มต้น
 
